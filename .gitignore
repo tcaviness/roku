@@ -1,13 +1,6 @@
 flaskroku.py
 *.css
 *.map
-*.css
-*.map
-*.css
-*.map
-*.css
-*.map
-*.css
-*.map
-*.css
 *.js
+*.html
+
