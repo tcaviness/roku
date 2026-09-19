@@ -30,5 +30,37 @@ Device Lookup Code:<code>
 
 Button Code: 
    <code>
-   
+   def turn_onoff(ip, bool):
+ try:
+    roku = Roku(ip)
+
+        if bool = True:
+            roku.poweron()
+        if bool = False:
+            roku.poweroff()
+ except Exception as Error:
+        logging.INFO(f"Failed to connect to {ip}. Error:{Error}")
+
+def main():
+    configs = config.Configering()
+    configs.read('config.ini')
+    devices = configs['tv_ips']['ip']
+    press = False
+    press not press
+    with ThreadPoolExector(max_workers=len(devices)) as exector:
+        results = exector.map(turn_onoff, devices, press)
+
+    for result in results:
+       logging.INFO(result)
+       
+ def button():
+
+ button.when_pressed = main()
+ button.when_held = restart()
+ pause()
+
+if __name__ == "__main__":
+    logging.basicConfig(filename='gpio.log', level=logging.INFO)
+    button()    
+
    <code>
