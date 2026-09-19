@@ -8,7 +8,8 @@ of them are turn off and on at the same time. I went with threads because, it wo
 What takes the longs time is doing the device lookup. It got put in its own service to run as a standalone app. 
 
 
-Device Lookup Code:<code>
+Device Lookup Code:
+<code>
  devices = Roku.discover(timeout=15, retries=3)
     ledB = LED(27)
     if not devices:
@@ -26,7 +27,8 @@ Device Lookup Code:<code>
                 config.write(cfile)
             if devices > 2:
             ledb.blink(on_time=0.5, off_time=0.5)
-            pause()</code>
+            pause()
+            </code>
 
 Button Code: 
    <code>
