@@ -2,7 +2,7 @@ from roku import Roku
 from gpiozero import Button, LED
 from signal import pause
 import configparise as config
-from concurrent.futures import ThreaPoolExecutor
+from concurrent.futures import ThreadPoolExecutor
 import subprosses as sub
 import logging as log
 
