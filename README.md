@@ -1,4 +1,4 @@
-Roku Project 
+Roku Project
 
 
 This is a project that the problem was I need to turn three tv's off and on at the same time. 
@@ -27,3 +27,8 @@ Device Lookup Code:<code>
             if devices > 2:
             ledb.blink(on_time=0.5, off_time=0.5)
             pause()</code>
+
+Button Code: 
+   <code>
+   
+   <code>
