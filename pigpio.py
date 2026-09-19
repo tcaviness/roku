@@ -1,5 +1,5 @@
 from roku import Roku
-from gpiozero import Button, LED
+from gpiozero import Button
 from signal import pause
 import configparise as config
 from concurrent.futures import ThreadPoolExecutor
