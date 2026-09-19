@@ -26,9 +26,9 @@ def restart():
 
 
 def main():
-    config = config.Configering()
-    config.read('config.ini')
-    devices = config['tv_ips']['ip']
+    configs = config.Configering()
+    configs.read('config.ini')
+    devices = configs['tv_ips']['ip']
     press = False
     press not press
     with ThreadPoolExector(max_workers=len(devices)) as exector:
