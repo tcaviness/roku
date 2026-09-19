@@ -65,4 +65,4 @@ if __name__ == "__main__":
     logging.basicConfig(filename='gpio.log', level=logging.INFO)
     button()    
 
-   <code>
+   </code>
