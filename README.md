@@ -42,7 +42,7 @@ Button Code:
             roku.poweroff()
  except Exception as Error:
         logging.INFO(f"Failed to connect to {ip}. Error:{Error}")
-
+</code><code>
 def main():
     configs = config.Configering()
     configs.read('config.ini')
@@ -54,7 +54,8 @@ def main():
 
     for result in results:
        logging.INFO(result)
-       
+   </code>
+   <code>    
  def button():
 
  button.when_pressed = main()
@@ -63,6 +64,4 @@ def main():
 
 if __name__ == "__main__":
     logging.basicConfig(filename='gpio.log', level=logging.INFO)
-    button()    
-
-   </code>
+    button() </code>
