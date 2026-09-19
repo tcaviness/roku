@@ -8,7 +8,7 @@ Type=simple
 User=roku
 WorkingDirectory=/home/roku
 ExecStart=/usr/bin/python3 /home/roku/pigpio.py
-Restart=on-falure
+Restart=on-failure
 
 [Install]
 Watedby=multi-user.target
