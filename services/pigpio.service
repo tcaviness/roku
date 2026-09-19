@@ -1,0 +1,14 @@
+[Unit]
+Description=This service listen to a button press or hold do turn off and on tvs.
+After=ckdevices.service
+Requires=ckdevices.service
+
+[Service]
+Type=simple
+User=roku
+WorkingDirectory=/home/roku
+ExecStart=/usr/bin/python3 /home/roku/pigpio.py
+Restart=on-falure
+
+[Install]
+Watedby=multi-user.target

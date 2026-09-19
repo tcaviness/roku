@@ -1,0 +1,14 @@
+[Unit]
+Description=This service checks for tvs to put into a ini file
+After=ckwifi.service
+Requires=ckwifi.service
+
+[Service]
+Type=simple
+User=roku
+WorkingDirectory=/home/roku
+ExecStart=/usr/bin/python3 /home/roku/ckdevies.py
+Restart=on-failure
+
+[Install]
+Watedby=multi-user.target

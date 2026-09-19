@@ -1,0 +1,14 @@
+[Unit]
+Description=This service checks wifi connection for ckdevices.service.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=roku
+WorkingDirectory=/home/roku
+ExecStart=/usr/bin/python3 /home/roku/ckwifi.py
+Restart=always
+
+[Install]
+Watedby=multi-user.target
