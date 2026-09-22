@@ -32,7 +32,7 @@ def main():
     press = False
     press not press
     with ThreadPoolExector(max_workers=len(devices)) as exector:
-        results = exector.map(turn_onoff, devices, press)
+        results = exector.map(turn_onoff, device, press) #[device for device in devices]
 
     for result in results:
        logging.INFO(result)
