@@ -17,7 +17,7 @@ def main():
     else:
         ledB.on()
         for device in devices:
-            logging.info(f'devices:'{device.host})
+            logging.info(f'devices:{device.host}')
             ips = device.host
             config = config.configPariser()
             config.set('tvs_ips','ip', ips )
