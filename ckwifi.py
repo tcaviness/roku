@@ -7,7 +7,7 @@ def cecknet():
    ledR = LED(17)
    ledG = LED(18)
 
-    IPaddress = soc.gethostbyname(soc.gethostbyname())
+IPaddress = soc.gethostbyname(soc.gethostbyname())
     if IPaddress == "127.0.0.1":
         ledR.on()
         return False
