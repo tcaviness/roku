@@ -7,7 +7,7 @@ import logging as log
 logging = log.getLogger(__name__)
 
 def main():
-    logging.basicConfig(filename='device.log', level=logging.INFO)
+    #logging.basicConfig(filename='device.log', level=logging.INFO)
     devices = Roku.discover(timeout=15, retries=3)
     ledB = LED(27)
     if not devices:
@@ -21,7 +21,7 @@ def main():
             ips = device.host
             config = config.configPariser()
             config.set('tvs_ips','ip', ips )
-            with open('config.ini, w') as cfile:
+            with open('config.ini','w') as cfile:
                 config.write(cfile)
             if devices > 2:
             ledb.blink(on_time=0.5, off_time=0.5)
