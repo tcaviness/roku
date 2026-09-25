@@ -3,7 +3,7 @@ from gpiozero import Button
 from signal import pause
 import configparise as config
 from concurrent.futures import ThreadPoolExecutor
-import subprosses as sub
+import subpross as sub
 import logging as log
 
 logging = log.getLogger(__name__)
