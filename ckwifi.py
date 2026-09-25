@@ -1,13 +1,13 @@
 from gpiozero import LED
-import socket as soc
+import socket
 from signal import pause
 
 
-def cecknet():
+def net():
    ledR = LED(17)
    ledG = LED(18)
 
-IPaddress = soc.gethostbyname(soc.gethostbyname())
+IPaddress = socket.gethostbyname(socket.gethostname())
     if IPaddress == "127.0.0.1":
         ledR.on()
         return False
@@ -18,4 +18,4 @@ IPaddress = soc.gethostbyname(soc.gethostbyname())
         pause()
 
 if __name__ == '__main__':
-    ckcknet()
+      net()
