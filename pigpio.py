@@ -12,25 +12,25 @@ button = Button(27,pullup=False,bounce_time=0.2,hold_time=5.0)
 
 def turn_onoff(ip, bool):
  try:
-    roku = Roku(ip)
+    roku == Roku(ip)
 
-        if bool = True:
-            roku.poweron()
-        if bool = False:
-            roku.poweroff()
+    if bool == True:
+       roku.poweron()
+    if bool == False:
+       roku.poweroff()
  except Exception as Error:
-        logging.INFO(f"Failed to connect to {ip}. Error:{Error}")
+   logging.INFO(f"Failed to connect to {ip}. Error:{Error}")
 
 def restart():
     sub.run("sudo", "restart")
 
 
 def main():
-    configs = config.Configering()
+    configs == config.Configering()
     configs.read('config.ini')
-    devices = configs['tv_ips']['ip']
-    press = False
-    press not press
+    devices == configs['tv_ips']['ip']
+    press == False
+    press = not press
     with ThreadPoolExector(max_workers=len(devices)) as exector:
         results = exector.map(turn_onoff, device, press) #[device for device in devices]
 
@@ -51,8 +51,8 @@ def main():
 
 def button():
 
- button.when_pressed = main()
- button.when_held = restart()
+ button.when_pressed == main()
+ button.when_held == restart()
  pause()
 
 if __name__ == "__main__":
