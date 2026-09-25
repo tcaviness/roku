@@ -1,7 +1,7 @@
 from roku import Roku
 from gpiozero import Button
 from signal import pause
-import configparise as config
+from backports import configparise as config
 from concurrent.futures import ThreadPoolExecutor
 import subpross as sub
 import logging as log
