@@ -12,7 +12,7 @@ button = Button(27,pullup=False,bounce_time=0.2,hold_time=5.0)
 
 def turn_onoff(ip, bool):
  try:
-    roku == Roku(ip)
+    roku = Roku(ip)
 
     if bool == True:
        roku.poweron()
@@ -51,8 +51,8 @@ def main():
 
 def button():
 
- button.when_pressed = main()
- button.when_held = restart()
+ button.when_pressed = main
+ button.when_held = restart
  pause()
 
 if __name__ == "__main__":
