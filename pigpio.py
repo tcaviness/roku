@@ -26,7 +26,7 @@ def restart():
 
 
 def main():
-    configs = config.Configering()
+    configs = config.ConfigParser()
     configs.read('config.ini')
     devices = configs['tv_ips']['ip']
     press = False
