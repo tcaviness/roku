@@ -1,5 +1,5 @@
 from roku import Roku
-from backports import configparise as config
+import configparser as config 
 from gpiozero import LED
 from signal import pause
 import logging as log
