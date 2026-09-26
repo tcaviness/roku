@@ -12,6 +12,7 @@ def main():
     ledB = LED(27)
     if not devices:
         ledB.blink()
+        print("empty")
         logging.info("empty")
         pause()
     else:
@@ -19,13 +20,18 @@ def main():
         for device in devices:
             logging.info(f'devices:{device.host}')
             ips = device.host
-            config = config.configPariser()
-            config.set('tvs_ips','ip', ips )
+            configs = config.configPariser()
+            configs.read('config.ini')
+            configs.set('tvs_ips','ip', ips )
             with open('config.ini','w') as cfile:
                 config.write(cfile)
-            if devices > 2:
-            ledb.blink(on_time=0.5, off_time=0.5)
-            pause()
+            if len(devices) > 2:
+                print(devices.host) 
+                                  ledB.blink(on_time=0.5,off_time=0.5)
+                pause()
+             else:
+               ledB.blink()
+               pause()
 
 if __name__ == "__main__":
     main()
