@@ -26,10 +26,10 @@ def restart():
 
 
 def main():
-    configs == config.Configering()
+    configs = config.Configering()
     configs.read('config.ini')
-    devices == configs['tv_ips']['ip']
-    press == False
+    devices = configs['tv_ips']['ip']
+    press = False
     press = not press
     with ThreadPoolExector(max_workers=len(devices)) as exector:
         results = exector.map(turn_onoff, device, press) #[device for device in devices]
@@ -51,8 +51,8 @@ def main():
 
 def button():
 
- button.when_pressed == main()
- button.when_held == restart()
+ button.when_pressed = main()
+ button.when_held = restart()
  pause()
 
 if __name__ == "__main__":
