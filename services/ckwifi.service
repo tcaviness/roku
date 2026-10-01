@@ -6,9 +6,9 @@ Wants=network-online.target
 [Service]
 Type=simple
 User=roku
-WorkingDirectory=/home/roku
-ExecStart=/usr/bin/python3 /home/roku/ckwifi.py
+WorkingDirectory=/home/project/roku/
+ExecStart=/usr/bin/python3 /home/project/roku/ckwifi.py
 Restart=always
 
 [Install]
-Watedby=multi-user.target
+WantedBy=multi-user.target

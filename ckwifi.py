@@ -1,21 +1,19 @@
 from gpiozero import LED
-import socket as soc
+import subprocess as sub
 from signal import pause
 
+ledR = LED(18)
 
-def cecknet():
-   ledR = LED(17)
-   ledG = LED(18)
+def ckhost(): 
+  result = sub.run(["hostname","-I"], capture_output=True, text=True)
+  ip = result.stdout.strip()
+  print(ip)
+  if ip =="":
+    ledR.on()
+  else: 
+    ledR.blink()
 
-IPaddress = soc.gethostbyname(soc.gethostbyname())
-    if IPaddress == "127.0.0.1":
-        ledR.on()
-        return False
-        pause()
-    else:
-        ledG.on()
-        return True
-        pause()
 
 if __name__ == '__main__':
-    ckcknet()
+    ckhost()
+    pause()
