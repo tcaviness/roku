@@ -27,7 +27,7 @@ def main():
                 config.write(cfile)
             if len(devices) > 2:
                 print(devices.host) 
-                                  ledB.blink(on_time=0.5,off_time=0.5)
+                ledB.blink(on_time=0.5,off_time=0.5)
                 pause()
              else:
                ledB.blink()
