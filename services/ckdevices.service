@@ -4,11 +4,14 @@ After=ckwifi.service
 Requires=ckwifi.service
 
 [Service]
+TimeoutStartSec=infinity
+TimeoutStopSec=infinty
 Type=simple
 User=roku
-WorkingDirectory=/home/roku
-ExecStart=/usr/bin/python3 /home/roku/ckdevies.py
+WorkingDirectory=/home/project/roku/
+ExecStart=+/usr/bin/python3 /home/project/roku/ckdevices.py
 Restart=on-failure
 
+
 [Install]
-Watedby=multi-user.target
+WantedBy=multi-user.target
